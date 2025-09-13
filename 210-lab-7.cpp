@@ -3,6 +3,20 @@
 #include <iostream>
 using namespace std;
 
+const int SIZE = 5;
+string* reverseArray(string* arr);
+void displayArray(string* arr);
+
 int main() {
+    string* arrPtr = new string[SIZE] {"Janet", "Jeff", "Jin", "Joe", "Junio"};
+    delete [] arrPtr; 
     return 0; 
+}
+
+string* reverseArray(string* arr) { 
+
+}
+
+void displayArray(string* arr) { 
+
 }
