@@ -24,8 +24,9 @@ int main() {
 string* reverseArray(string* arr) { 
     string* revArray = new string[SIZE]; 
     for (int i = 0; i < SIZE; i++) { 
-        revArray[i] = arr[SIZE - 1 - i];
+        *(revArray + i) = *(arr + SIZE - 1 - i);
     }
+    delete [] arr; 
     return revArray;
 }
 
@@ -34,7 +35,7 @@ string* reverseArray(string* arr) {
 // returns: None
 void displayArray(string* arr) { 
     for(int i = 0; i < SIZE; i++) { 
-        cout << arr[i] << " ";
+        cout << *(arr + i) << " ";
     }
     cout << endl; 
 }
